@@ -13,11 +13,12 @@ Should also work for some previous versions, like 0.18.*.
 
 CK3 runs most scripts in single thread. Game would lag if there are too many characters with too many scripts. Or at least spend more electric power.
 
-Every year, every character in the world might get harm events thru `yearly_health_pulse`. To decide which events would occur, trigger/weight calculation is performed, for `health.7200` event, then for `health.7300`, then for other events.
+Every year, every character in the world might get harm events thru `yearly_health_pulse`. To decide which events would occur, trigger/weight calculation is performed, for `health.7200` event, then for `health.7300`, then for other events.  
 
-At trigger/weight evaluation, `health.7200` event usually calls `ek_human_age_equivalent_calc` at 6 times for most characters above 18yo, and least 16 times for characters of age 50 or more. That is because the event trigger evaluates `ek_human_age_equivalent` three times, and `ek_human_age_equivalent` calls `ek_human_age_equivalent_calc` twice. For most 50yo, weight calculation occurs, that calls `ek_human_age_equivalent` at least 7 times.
+At trigger/weight evaluation, `health.7200` event usually calls `ek_human_age_equivalent_calc` 6 times for most characters above 18yo, and 16 times for characters of age 50 or more. That is because the event trigger evaluates `ek_human_age_equivalent` three times, and `ek_human_age_equivalent` calls `ek_human_age_equivalent_calc` twice. For most 50yo, weight calculation occurs, that calls `ek_human_age_equivalent` at least 7 times.
 
-Other events call the subroutine, too. I did not count exactly, but I believe that `ek_human_age_equivalent_calc` is called dozens of time per character per year on average.
+Other events and effects call the subroutine, too. Matchmaking subroutines surely do.
+I did not count exactly, but I believe that `ek_human_age_equivalent_calc` is called dozens — if not hundreds — of times per adult character per year, on average.
 
 In my games I increase birth-rate (for me and all other characters), and thus care a lot about scripts that evaluate on every character in the world.
 
