@@ -4,7 +4,7 @@ This mod speeds up health and harm events evaluation, by caching result of `ek_h
 
 ## Technical requirements
 
-* Game version 1.19.0.6.
+* Crusader Kings version 1.19.0.6.
 * Elder Kings modification version 0.19.0.1.
 
 Should also work for some previous versions, like 0.18.*.
