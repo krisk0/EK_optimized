@@ -1,0 +1,20 @@
+﻿on_birthday = {
+	on_actions = { EK_optimized_cache_age }
+}
+
+
+EK_optimized_cache_age = {
+	trigger = {
+		age > 18
+	}
+	effect = {
+		set_variable = {
+			name = ek_human_age_equivalent_cache
+			value = {
+				value = ek_human_age_equivalent_calc
+				min = 18
+			}
+			years = 1
+		}
+	}
+}
