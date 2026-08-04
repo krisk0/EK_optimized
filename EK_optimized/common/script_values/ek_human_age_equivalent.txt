@@ -4,7 +4,7 @@ ek_human_age_equivalent = {
 	if = {
 		limit = { age > 18 }
 		if = {
-			limit = { has_variable = ek_human_age_equivalent_cache }
+			limit = { exists = var:ek_human_age_equivalent_cache }
 			value = var:ek_human_age_equivalent_cache
 		}
 		else = {
