@@ -70,7 +70,24 @@ ek_human_age_equivalent = {
 }
 ```
 
-The question is: is that intentional sabotage? If not can you please fix your code? And do similar change in `add_magicka` effect?
+The question is: why are you doing double work? Is that intentional slow-down? Can you please fix your code? And can you fix `add_magicka` effect to call `magicka_max` once?
+```
+add_magicka = {
+        custom_description = {
+                text = add_magicka
+                value = $VALUE$
+                if = {
+                        limit = { $VALUE$ != 0 }
+                        if = {
+                                limit = { NOT = { has_variable = magicka } }
+                                set_variable = { name = magicka value = 0 }
+                        }
+                        change_variable = { name = magicka add = $VALUE$ }
+                        clamp_variable = { name = magicka max = magicka_max }
+                }
+  }
+}
+```
 
 ## My mods
 
