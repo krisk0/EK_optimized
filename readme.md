@@ -9,6 +9,8 @@ This mod speeds up health and harm events evaluation, by caching result of `ek_h
 
 Should also work for some previous versions, like 0.18.*.
 
+This mod adds no new content and is safe for mid-game installation.
+
 ## Motivation
 
 CK3 runs most scripts in single thread. Game would lag if there are too many characters with too many scripts. Or at least spend more electric power.
