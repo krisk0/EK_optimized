@@ -1,6 +1,6 @@
 # Elder Kings Optimized
 
-This mod speeds up health and harm events evaluation, by caching result of `ek_human_age_equivalent_calc` in a variable. As a result, the subroutine is only called once per year for most characters.
+This mod speeds up health, harm and matchmaking code evaluation, by caching result of `ek_human_age_equivalent_calc` in a variable. As a result, the subroutine is only called once per year for most characters.
 
 ## Technical requirements
 
